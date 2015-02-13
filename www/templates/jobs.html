@@ -1,0 +1,12 @@
+<ion-view title="Job Feeds">
+  <ion-nav-buttons side="left">
+      <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+  </ion-nav-buttons>
+  <ion-content class="has-header">
+    <ion-item ng-repeat="job in jobs" href="#/app/jobs/{{job.id}}" class="item item-avatar">
+      <img ng-src={{getImage(job.user_id)}}>
+      <h2>{{job.title}}</h2>
+      <p>{{job.created_at | date:"MMMM d, y 'at' h:mma"}}</p>
+    </ion-item>
+  </ion-content>
+</ion-view>

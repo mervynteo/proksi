@@ -1,0 +1,9 @@
+<ion-view title="Messages">
+  <ion-content class="has-header">
+    <ion-item ng-repeat="message in messages" href="#/app/reply/{{message.id}}" class="item item-avatar">
+      <img ng-src={{getImage(message.sender_id)}}>
+      <p>{{message.content}}</p>
+      <p>{{message.created_at | date:"MMMM d, y 'at' h:mma"}}</p>
+    </ion-item>
+  </ion-content>
+</ion-view>

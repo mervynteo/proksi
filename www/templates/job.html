@@ -1,0 +1,63 @@
+<!-- <ion-view title="Job">
+    <ion-content class="has-header">
+        <div class="list card">
+          
+          <div class="item item-avatar">
+              <img ng-src={{getImage(job.user_id)}}>
+            <h2>{{job.title}}</h2> {{job.price | currency: 'Php'}}
+            <p>{{job.created_at | date:"MMMM d, y 'at' h:mma"}}</p>
+          </div>
+
+          <div class="item item-body">
+            <div class="list">
+              <p>{{job.content}}</p>
+              <small>Location: {{job.location}}</small>
+            </div>
+          </div>
+
+        </div>
+        <div class="item item-body" ng-show="isLogin">
+                <div class="list">
+                    <form name="messageForm" ng-submit="sendMessage()">
+
+  <label class="item item-input item-stacked-label">
+    <span class="input-label">Message</span>
+  <textarea id="message" ng-keypress="updateEditor()" ng-model="message.content" placeholder="Message" required> </textarea>
+  </label>
+  <button type="submit" class="button button-block button-positive" ng-disabled="messageForm.$invalid">
+  Send
+</button>
+                    </form>
+</div>
+</div>
+    </ion-content>
+</ion-view> -->
+
+<ion-view title="">
+  <ion-content class="has-header">
+
+    <div class="item item-avatar">
+      <img ng-src="{{getImage(job.user_id)}}" alt="">
+      <h2>{{job.title}}</h2>
+      <h3>{{job.price | currency: 'Php '}}</h3>
+    </div>
+
+    <div class="item item-body">
+      <p>{{job.content}}</p>
+    </div>
+
+    <div class="item tab" ng-show="isLogin">
+      <form name="messageForm" ng-submit="sendMessage()">
+        <div class="list">
+          <label class="item item-input item-floating-label">
+            <span class="input-label">Message</span>
+            <textarea id="message" ng-keypress="updateEditor()" ng-model="message.content" placeholder="Message" required></textarea>
+          </label>
+          <button type="submit" class="button button-block button-stable" ng-disabled="messageForm.$invalid">Send</button>
+        </div>
+      </form>
+    </div>
+
+
+  </ion-content>
+</ion-view>

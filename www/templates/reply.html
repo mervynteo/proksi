@@ -1,0 +1,21 @@
+<ion-view title="Reply">
+  <ion-content class="has-header">
+    
+    <div class="list card">
+      <div class="item item-avatar">
+        <img ng-src={{getImage(userMessage.sender_id)}}>
+        <p>{{userMessage.content}}</p>
+        <p>{{userMessage.created_at | date:"MMMM d, y 'at' h:mma"}}</p>
+      </div>
+
+      <form name="messageForm" ng-submit="sendMessage()">
+        <label class="item item-input item-stacked-label">
+          <span class="input-label">Message</span>
+          <textarea id="message" ng-keypress="updateEditor()" ng-model="reply.content" placeholder="Message" required> </textarea>
+        </label>
+        <button type="submit" class="button button-block button-stable" ng-disabled="messageForm.$invalid">Send</button>
+      </form>
+    </div>
+
+  </ion-content>
+</ion-view>

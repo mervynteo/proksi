@@ -1,0 +1,34 @@
+<ion-view title="Post Job">
+    <ion-content class="has-header">
+        <div class="list card">
+            <div class="item">
+                <h2>{{user.name}}</h2>
+            </div>
+            <div class="item item-body">
+                <div class="list">
+                    <form ng-submit="submitJob()" name="jobForm">
+  <label class="item item-input item-stacked-label">
+    <span class="input-label">Title</span>
+    <input type="text" placeholder="title" ng-model="form.title" required>
+  </label>
+  <label class="item item-input item-stacked-label">
+    <span class="input-label">Price</span>
+    <input type="number" placeholder="Price" ng-model="form.price" required>
+  </label>
+  <label class="item item-input item-stacked-label">
+    <span class="input-label">Location</span>
+    <input type="text" placeholder="Location" ng-model="form.location" required>
+  </label>
+  <label class="item item-input item-stacked-label">
+    <span class="input-label">Description</span>
+  <textarea id="descrition" ng-keypress="updateEditor()" ng-model="form.content" placeholder="Descrition" required> </textarea>
+  </label>
+  <button type="submit" class="button button-block button-stable" ng-disabled="jobForm.$invalid">
+  Submit
+</button>
+</form>
+</div>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

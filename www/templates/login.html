@@ -1,0 +1,21 @@
+<ion-modal-view>
+  <ion-header-bar>
+    <h1 class="title"><span ng-hide="isLogin">Login</span>
+        <span ng-show="isLogin">Logout</span></h1>
+    <div class="buttons">
+      <button class="button button-clear" ng-click="closeLogin()">Close</button>
+    </div>
+  </ion-header-bar>
+  <ion-content>
+    <form class="form-login">
+      <div class="list">
+    <label class="item">
+      <button class="button button-block button-stable" ng-click="fbLogin()">
+        <span ng-hide="isLogin">Login to facebook</span>
+        <span ng-show="isLogin">Logout</span>
+      </button>
+    </label>
+      </div>
+    </form>    
+  </ion-content>
+</ion-modal-view>

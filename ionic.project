@@ -1,0 +1,12 @@
+{
+  "name": "proksi",
+  "app_id": "6c69ea3d",
+  "gulpStartupTasks": [
+    "sass",
+    "watch"
+  ],
+  "watchPatterns": [
+    "www/**/*",
+    "!www/lib/**/*"
+  ]
+}
